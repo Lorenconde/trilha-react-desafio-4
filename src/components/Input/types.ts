@@ -1,3 +1,5 @@
+import { InputHTMLAttributes } from 'react';
+
 import { Control } from "react-hook-form";
 import { IFormLogin } from "../../pages/Login/types";
 

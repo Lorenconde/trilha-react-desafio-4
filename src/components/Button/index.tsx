@@ -1,8 +1,21 @@
-import { ButtonContainer } from "./styles";
-import { IButtonProps } from "./types";
 
-const Button = ({ title, onClick }: IButtonProps) => {
-  return <ButtonContainer onClick={onClick}>{title}</ButtonContainer>;
+import { ButtonContainer } from './styles';
+
+
+interface IButtonProps {
+  title: string;
+  disabled?: boolean;
+}
+
+const Button = ({ title, disabled }: IButtonProps) => {
+  return (
+    <ButtonContainer
+      type="button"
+      disabled={disabled}
+    >
+      {title}
+    </ButtonContainer>
+  );
 };
 
 export default Button;
